@@ -16,6 +16,7 @@
 
 body {
   margin: 0;
+  background-color: #e0e0e0;
 }
 
 /* Disable ugly boxes around images in IE10 */
@@ -24,12 +25,12 @@ a img{
 }
 
 ::-moz-selection {
-  background-color: #6ab344;
+  background-color: #1b1b1b;
   color: #fff;
 }
 
 ::selection {
-  background-color: #6ab344;
+  background-color: #1b1b1b;
   color: #fff;
 }
 
@@ -41,7 +42,6 @@ a img{
   z-index: 50;
   margin: 0 !important;
 }
-
 
 .mdl-textfield--expandable {
   width: auto;
@@ -69,7 +69,7 @@ a img{
 
 .android-header {
   overflow: visible;
-  background-color: white;
+  background-color: #535353;
 }
 
   .android-header .material-icons {
@@ -429,12 +429,12 @@ a img{
   }
 
 .android-footer {
-  background-color: #fafafa;
+  background-color: #6d6d6d;
   position: relative;
 }
 
   .android-footer a:hover {
-    color: #8bc34a;
+    color: #1b1b1b;
   }
 
   .android-footer .mdl-mega-footer--top-section::after {
@@ -472,6 +472,7 @@ a img{
 
   .android-title {
     display: none !important;
+    font-family: Sarabun, "Sarabun ExtraBold", "Sarabun ExtraLight", "Sarabun Light", "Sarabun Medium", "Sarabun SemiBold", "Sarabun Thin"
   }
 
   .android-mobile-title {
