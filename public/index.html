@@ -1,75 +1,129 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Android</title>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
-
-    <script>
-      // Your web app's Firebase configuration
-      const firebaseConfig = {
-    apiKey: "AIzaSyCN53vEmrpVODHK4nA3Qh1anEJaSg8hedE",
-    authDomain: "comuthor-36139.firebaseapp.com",
-    databaseURL: "https://comuthor-36139-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "comuthor-36139",
-    storageBucket: "comuthor-36139.appspot.com",
-    messagingSenderId: "424647196799",
-    appId: "1:424647196799:web:6ef18787c4b856cea03f4a",
-    measurementId: "G-YJRR1QBRRZ"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-    </script>
-
-    <!-- Include FirebaseUI -->
-    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css"
-    />
-	
-    <script type="text/javascript">
-      // FirebaseUI config.
-      const uiConfig = {
-        signInSuccessUrl: "dashboard.html",
-        signInOptions: [
-          // Leave the lines as is for the providers you want to offer your users.
-          firebase.auth.EmailAuthProvider.PROVIDER_ID,
-		  firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-          firebase.auth.GoogleAuthProvider.PROVIDER_ID
-        ],
-        // tosUrl and privacyPolicyUrl accept either url string or a callback
-        // function.
-        // Terms of service url/callback.
-        tosUrl: "#",
-        // Privacy policy url/callback.
-        privacyPolicyUrl: function () {
-          window.location.assign("#");
-        },
-      };
-
-      // Initialize the FirebaseUI Widget using Firebase.
-      const ui = new firebaseui.auth.AuthUI(firebase.auth());
-      // The start method will wait until the DOM is loaded.
-      ui.start("#firebaseui-auth-container", uiConfig);
-    </script>
-
-    <!-- Style -->
-    <link rel="stylesheet" href="style.css" />
+    <!-- Page styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.min.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+    </style>
   </head>
   <body>
-    <!-- The surrounding HTML is left untouched by FirebaseUI.
-         Your app may use that space for branding, controls and other customizations.-->
-    <div class="container-login">
-      <div class="login-form">
-        <h1>🔐</h1>
-        <h1>Please Sign In</h1>
-        <div id="firebaseui-auth-container"></div>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+      <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row">
+          <span class="android-title mdl-layout-title">
+		  Comuthor
+            <!-- <img class="android-logo-image" src="images/android-logo.png"> -->
+          </span>
+          <!-- Add spacer, to align navigation to the right in desktop -->
+          <div class="android-header-spacer mdl-layout-spacer"></div>
+          <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" id="search-field">
+            </div>
+          </div>
+          <!-- Navigation -->
+          <div class="android-navigation-container">
+            <nav class="android-navigation mdl-navigation">
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Home</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Browse Community</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Create World</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Create Character</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Art</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">About Us</a>
+            </nav>
+          </div>
+          <span class="android-mobile-title mdl-layout-title">
+            <img class="android-logo-image" src="images/android-logo.png">
+          </span>
+          <button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+            <i class="material-icons">more_vert</i>
+          </button>
+          <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
+            <li class="mdl-menu__item">Login</li>
+            <li class="mdl-menu__item">Register</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="android-drawer mdl-layout__drawer">
+        <span class="mdl-layout-title">
+          <img class="android-logo-image" src="images/android-logo-white.png">
+        </span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="">Home</a>
+          <a class="mdl-navigation__link" href="">Browse Community</a>
+          <a class="mdl-navigation__link" href="">Create World</a>
+          <a class="mdl-navigation__link" href="">Create Character</a>
+          <a class="mdl-navigation__link" href="">Art</a>
+          <a class="mdl-navigation__link" href="">About Us</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">Profile</span>
+          <a class="mdl-navigation__link" href="">Login</a>
+          <a class="mdl-navigation__link" href="">Register</a>
+          <div class="android-drawer-separator"></div>
+        </nav>
+      </div>
+
+      <div class="android-content mdl-layout__content">
+        <a name="top"></a>
+        <div class="android-be-together-section mdl-typography--text-center">
+          <div class="logo-font android-slogan">เริ่มเล่น เริ่มเขียน เริ่มสร้าง</div>
+          <div class="logo-font android-sub-slogan">เซ็งกับมาร์คที่ไม่ซ่อมซักที</div>
+          <div class="logo-font android-create-character">
+            <a href=""><img src="images/andy.png"> เริ่มต้นที่ Comuthor</a>
+          </div>
+        </div>
+
+        <footer class="android-footer mdl-mega-footer">
+          <div class="mdl-mega-footer--top-section">
+            <div class="mdl-mega-footer--left-section">
+              <button class="mdl-mega-footer--social-btn"></button>
+              &nbsp;
+              <button class="mdl-mega-footer--social-btn"></button>
+              &nbsp;
+              <button class="mdl-mega-footer--social-btn"></button>
+            </div>
+            <div class="mdl-mega-footer--right-section">
+              <a class="mdl-typography--font-light" href="#top">
+                Back to Top
+                <i class="material-icons">expand_less</i>
+              </a>
+            </div>
+          </div>
+
+          <div class="mdl-mega-footer--middle-section">
+            <p class="mdl-typography--font-light">Comuthor: © 2021</p>
+          </div>
+
+            <a class="android-link mdl-typography--font-light" href="">Blog</a> | 
+            <a class="android-link mdl-typography--font-light" href="">Privacy Policy</a>
+          </div>
+
+        </footer>
       </div>
     </div>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   </body>
 </html>
