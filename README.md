@@ -8,7 +8,6 @@
 <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Mujina7569/Comuthor-firebase">
 <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/w/Mujina7569/Comuthor-firebase">
 <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/Mujina7569/Comuthor-firebase">
-  
 </p>
 
 
