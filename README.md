@@ -3,11 +3,11 @@
 <h1>Commuthor</h1>
 </p>
 <p align="center">
-<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Pupun2542/Commuthor">
-<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Pupun2542/Commuthor">
-<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Pupun2542/Commuthor">
-<img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/w/Pupun2542/Commuthor">
-<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/Pupun2542/Commuthor">
+<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Mujina7569/Comuthor-firebase">
+<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Mujina7569/Comuthor-firebase">
+<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Mujina7569/Comuthor-firebase">
+<img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/w/Mujina7569/Comuthor-firebase">
+<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/Mujina7569/Comuthor-firebase">
   
 </p>
 
